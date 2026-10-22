@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформить заказ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header>
+        <h1>Вкусные ланчи</h1>
+        <nav>
+            <a href="index.html">О нас</a>
+            <a href="menu.html">Меню</a>
+            <a href="checkout.html" class="active">Оформить заказ</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Состав заказа</h2>
+            <div id="order-items-container"></div>
+        </section>
+
+        <section id="checkout-form-section" style="display: none;">
+            <h2>Оформление заказа</h2>
+            <form class="order-form" id="checkout-form">
+                <div class="form-block">
+                    <h3>Ваш заказ</h3>
+                    <div id="form-summary-content"></div>
+                    <div class="total-price">
+                        <p>Стоимость заказа: <span id="form-total-price">0</span> ₽</p>
+                    </div>
+                </div>
+                <div class="form-block">
+                    <h3>Данные клиента</h3>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Я согласен получать информацию о скидках и акциях</label>
+                    </div>
+
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="address">Адрес доставки:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <fieldset>
+                        <legend>Предпочтительное время доставки:</legend>
+                        <div class="radio-group">
+                            <input type="radio" id="time_now" name="delivery_time_pref" value="now" checked>
+                            <label for="time_now">Как можно скорее</label>
+                            <input type="radio" id="time_by_time" name="delivery_time_pref" value="by_time">
+                            <label for="time_by_time">К определенному времени</label>
+                        </div>
+                    </fieldset>
+
+                    <label for="exact_time">Точное время доставки (если выбрано "К определенному времени"):</label>
+                    <input type="time" id="exact_time" name="exact_time" min="07:00" max="23:00" step="300">
+
+                    <label for="comment">Комментарий к заказу:</label>
+                    <textarea id="comment" name="comment" rows="3"></textarea>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-submit">Отправить заказ</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>Адрес: г. Москва, ул. Студенческая, д. 1</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

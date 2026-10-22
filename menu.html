@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header>
+        <h1>Вкусные ланчи</h1>
+        <nav>
+            <a href="index.html">О нас</a>
+            <a href="menu.html" class="active">Меню</a>
+            <a href="checkout.html">Оформить заказ</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">Супы</h2>
+            <div class="filters" data-category="soup">
+                <button class="filter-btn" data-kind="fish">Рыбный</button>
+                <button class="filter-btn" data-kind="meat">Мясной</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианский</button>
+            </div>
+            <div class="dishes-grid" id="soups-container"></div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Главные блюда</h2>
+            <div class="filters" data-category="main">
+                <button class="filter-btn" data-kind="fish">Рыбное</button>
+                <button class="filter-btn" data-kind="meat">Мясное</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианское</button>
+            </div>
+            <div class="dishes-grid" id="main-dishes-container"></div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Салаты и стартеры</h2>
+            <div class="filters" data-category="salad">
+                <button class="filter-btn" data-kind="fish">Рыбный</button>
+                <button class="filter-btn" data-kind="meat">Мясной</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианский</button>
+            </div>
+            <div class="dishes-grid" id="salads-container"></div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Напитки</h2>
+            <div class="filters" data-category="drink">
+                <button class="filter-btn" data-kind="cold">Холодный</button>
+                <button class="filter-btn" data-kind="hot">Горячий</button>
+            </div>
+            <div class="dishes-grid" id="drinks-container"></div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Десерты</h2>
+            <div class="filters" data-category="dessert">
+                <button class="filter-btn" data-kind="small">Маленькая порция</button>
+                <button class="filter-btn" data-kind="medium">Средняя порция</button>
+                <button class="filter-btn" data-kind="large">Большая порция</button>
+            </div>
+            <div class="dishes-grid" id="desserts-container"></div>
+        </section>
+
+        <!-- Sticky панель вместо формы -->
+        <div class="sticky-panel" id="sticky-panel" style="display: none;">
+            <div class="panel-content">
+                <span class="panel-total">Итого: <span id="panel-total-price">0</span> ₽</span>
+                <a href="checkout.html" id="checkout-link" class="panel-link disabled">Перейти к оформлению</a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacts">
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>Адрес: г. Москва, ул. Студенческая, д. 1</p>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
